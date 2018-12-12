@@ -55,10 +55,10 @@ class FacadeHandler(BaseHTTPRequestHandler):
 							self.wfile.write(p.stdout.read())
 						except:
 							self.send_error(405)
-							Generators.get(id).cond = False
+							Generators.get(id).cond = "broken"
 					else:
 						self.send_error(405)
-						Generators.get(id).cond = False
+						Generators.get(id).cond = "broken"
 				else:
 					print(id);
 					print(Generators.get(id))                    
