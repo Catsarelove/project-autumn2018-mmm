@@ -30,7 +30,7 @@ def Gens_Cond():
 
 class FacadeHandler(BaseHTTPRequestHandler):    
 	def do_GET(self):                                          
-		rootdir ="C:/Users/Public/Documents/Programming/Project"   
+		rootdir =""   
 		try:   
 			if self.headers['request'] == 'get_tasklist': #запрос списка задач 
 				self.send_response(200)   
