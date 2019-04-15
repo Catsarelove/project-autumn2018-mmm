@@ -74,7 +74,7 @@ class MyClient(AMQP_client):
 								p.wait()
 								_fin = open('_stdout', 'rb')
 								_data = _fin.read()
-								if _data == 'Хуй соси губой тряси':
+								if _data == 'error':
 									self.send(ch, 'interface', 'fanout', 1, 'error_post_task', _data)   
 								else:
 									self.send(ch, 'latex', 'fanout', 1, 'post_task', _data)
